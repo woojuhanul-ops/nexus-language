@@ -1,5 +1,17 @@
 # Release Notes
 
+## v0.1.1 — Number system principles supplement (2026-11-05)
+
+- Added `numbers/수체계_원칙_보충_2026-11-05.md`: two principles of the
+  Nexus Number System stated as spec — (1) intensity gradations between
+  values are fixed by agreement (declared in the spec), not by a
+  physical limit; (2) anything that appears two or more times can be
+  compressed, subject to the dictionary-plus-index accounting rule —
+  plus the run-folding encoding rule (repetition count carried by a
+  symbol's intensity) and the measured evidence for it.
+- No registered dictionary values were changed; extension is by new
+  documents only, as before.
+
 ## First public release
 
 - **First publication date: 2026-11-05**

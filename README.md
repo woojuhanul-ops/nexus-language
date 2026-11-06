@@ -66,7 +66,7 @@ worked example of the method.
 
 ```
 language/        Grammar canon, dictionaries, interpreters, test report
-numbers/         Pattern dictionary of Qwen3-4B (JSON + human-readable)
+numbers/         Pattern dictionary of Qwen3-4B (JSON + human-readable) + number-system principles
 akashic-search/  The find-don't-store search method and procedure
 tag-records/     Grammar of tag-born records (capsule format)
 ```

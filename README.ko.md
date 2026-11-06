@@ -61,7 +61,7 @@
 
 ```
 language/        문법 정본, 사전, 해석기, 시험 보고서
-numbers/         Qwen3-4B 패턴 사전 (JSON + 사람용 문서)
+numbers/         Qwen3-4B 패턴 사전 (JSON + 사람용 문서) + 수 체계 원칙 보충
 akashic-search/  저장하지 않고 찾는 탐색 방법과 절차
 tag-records/     태그로 태어나는 기록의 문법 (캡슐 형식)
 ```
