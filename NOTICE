@@ -1,0 +1,29 @@
+Nexus Language and Nexus Number System (Nexus Numbers)
+A work of the Nexus Group.
+
+This package includes a language system, a number system, and companion
+methods developed by the Nexus Group.
+
+Attribution
+-----------
+Nexus Language, the Nexus Number System (Nexus Numbers), Akashic
+Search, and Tag-born Records are works of the Nexus Group. When you
+redistribute or adapt this package, keep this attribution intact, as
+required by the Apache License 2.0 (code) and the Creative Commons
+Attribution 4.0 International License (documents, grammars,
+dictionaries, and data files).
+
+Names are not licensed
+----------------------
+Neither license grants permission to use the names "Nexus Group",
+"Nexus Language", or "Nexus Number System (Nexus Numbers)" as the
+name or brand of your own product or work, or in any way that suggests
+endorsement by the Nexus Group. Identifying this original work by name
+for attribution purposes is required; presenting a derivative as the
+Nexus Group's own work is not permitted.
+
+Measured data
+-------------
+The pattern dictionary under numbers/ contains statistics measured
+from Qwen3-4B (Alibaba Cloud), Apache License 2.0. It contains no
+model weights.
