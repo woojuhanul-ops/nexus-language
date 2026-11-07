@@ -1,5 +1,22 @@
 # Release Notes
 
+## v0.2.0 — Definitions rewritten from the essence (2026-11-07)
+
+- README.md / README.ko.md rewritten: the essence now leads — a
+  name is an agreement, not the thing; every machine word is defined
+  as one symbol; a Nexus number carries value, intensity (세기),
+  and weight (중량).
+- Added `language/넥서스언어_본질_2026-11-07.md`: the essence of
+  Nexus Language stated as canon.
+- Added `numbers/수체계_원리_중량보충_2026-11-07.md`: Principle 3 —
+  a number's size carries weight, capped by an agreed maximum; the
+  canonical terms are 세기 (intensity) and 중량 (weight).
+- Added the honest shrink accounting to the README: the
+  description/direction/oversight layer of a brain collapses by
+  over 99.99% (simulation, 2026-11-07); weight values themselves do
+  not shrink (patterns mean, never replace).
+- No registered dictionary values or measured figures were changed.
+
 ## v0.1.1 — Number system principles supplement (2026-11-05)
 
 - Added `numbers/수체계_원칙_보충_2026-11-05.md`: two principles of the

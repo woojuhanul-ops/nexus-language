@@ -2,106 +2,144 @@
 
 **A work of the Nexus Group — 넥서스 그룹의 작품입니다.**
 
-A language and number system designed for machines to speak to machines —
-and for the records they leave behind to be born already structured.
-
-> **Status: pre-release.** The Nexus Group's legal review is complete
-> (2026-11-05, conditional pass — all required measures applied). The
-> licensing terms below are final and take effect on first publication,
-> whose date will be recorded in `RELEASE_NOTES.md`.
+> **v0.2.0 (2026-11-07):** Definitions rewritten from the essence up.
+> The v0.1.x text described what the system *does*; this edition states
+> what it *is*. Registered data (dictionaries, measured figures) is
+> unchanged — meanings never change; documents grow by addition.
 
 ---
 
+## The essence — a name is not the thing
+
+A building stands in New York. People call it the Empire State
+Building. A snake looking at the same building does not call it that;
+a visitor from another world would give it a name in their own tongue.
+The thing exists; the name is only a label that some community agreed
+on for its own convenience. No name is the eternal name, and no name
+is the "correct" name — had the first person to name corn chosen a
+different word, corn would carry that word today.
+
+**Nexus Language is built on that fact.** Every word used to write
+programs and machine state is cut down to word-sized units, and each
+unit is defined as **one symbol**. A ten-letter word becomes one
+symbol; when that word appears ten times in a brain, it is written as
+one symbol ten times — a tenth of the bulk. The vocabulary of machine
+language is finite, so every word can be defined; when a symbol is
+missing, we mint one and agree on it. The dictionary's rule — *a
+registered meaning never changes; growth is by new registration
+only* — is the lock that keeps those agreements fixed.
+
+Machine-to-machine conversation is where this system is *used*. The
+definition system itself is what it *is*.
+
 ## What this is
 
-Human languages serve human speakers. **Nexus Language** serves the other
-conversation: AI systems, programs, and computers exchanging state,
-instructions, and records with each other. It grows out of µTAG (2025), a
-tag-capsule protocol for passing direction and context between AIs, and adds
-what a protocol needs to become a language: a fixed grammar, an immutable
-dictionary, a deterministic code-layer interpreter, and a book of laws with
+Out of µTAG (2025), a tag-capsule protocol for passing direction and
+context between AIs, Nexus Language adds what a protocol needs to
+become a language: a fixed grammar, an immutable dictionary, a
+deterministic code-layer interpreter, and a book of laws with
 three-valued verdicts (pass / hold / reject).
 
-**The Nexus Number System (Nexus Numbers)** is its sibling. Numbers keep doing arithmetic, with the
-ordinary operator symbols everyone already shares (+ − × ÷ √ …). On top of
-the values sits a *pattern layer*: every measured distribution ("the grain"
-of a set of numbers) is registered in a dictionary under one symbol, so the
-symbol **means** the pattern instead of replacing the numbers.
+**The Nexus Number System** is its sibling, built on the same
+principle. A Nexus number carries three things in one body:
+
+- **Value** — the number itself; arithmetic stays ordinary
+  mathematics, with the operator symbols everyone shares
+  (+ − × ÷ √ …).
+- **Intensity** (세기 — depth/brightness) — how many times the same
+  number runs in a row, folded into the number itself instead of
+  being written out repeatedly. The number of gradations is an
+  *agreement*, not a physical limit: between any two steps the scale
+  divides fractally, and we fix the steps by convention — a
+  hundredth, a millionth, whatever the system declares.
+- **Size as weight** (중량) — a number's size carries weight; the
+  deeper, the heavier, up to a maximum weight fixed by agreement.
+  Nothing in the system is heavier than that.
+
+The *pattern layer* sits on top: the grain (결) formed by values,
+intensities, and weights across a set of numbers is registered in a
+dictionary under one symbol, so the symbol **means** the pattern
+instead of replacing the numbers.
 
 Two companion methods complete the package:
 
-- **Akashic Search** — don't store the world; know how to find it. A
-  question is decomposed, routed to verified shortcuts and field gateways,
-  retrieved in full, judged against sources and dates, and the successful
-  path is recorded so the system gets faster the more it is used.
-- **Tag-born Records** — records are generated in tag form at the moment
-  they are created (never translated afterwards from prose), in a
-  ledger-shared capsule format that code can parse deterministically.
+- **Akashic Search** — don't store the world; know how to find it.
+- **Tag-born Records** — records generated in tag form at the moment
+  they are created, never translated afterwards from prose.
 
 ## Measured results
 
-All figures below come from tests run against a live system and are
-documented in `language/패턴언어_해석효율시험_2026-11-05.md`
-(interpretation & efficiency test report).
+All figures come from tests run against a live system, documented in
+`language/패턴언어_해석효율시험_2026-11-05.md`.
 
 | Test | Result |
-|---|---|
+| --- | --- |
 | Status reports, 20 items — tokens, pattern language vs prose | **194 vs 612 (−68.3%)** |
 | Status reports, 20 items — tokens, pattern language vs JSON | **194 vs 972 (−80.0%)** |
 | Read-back accuracy — pattern language (code parse) | **100% (20/20)** |
 | Read-back accuracy — prose (model re-read, 10-item sample) | 48.8% of fields |
 | Interpretation — code interpreter | **100%** (roundtrip 16/16, collision check 0) |
 | Interpretation — local AI models, 12 tasks, full marks | 7/12 (4B waiter) · 5/12 (8B kitchen) |
-| Class-consistency check (refinement №1) | 398/398 valid claims pass · 796/796 false claims caught |
+| Class-consistency check | 398/398 valid claims pass · 796/796 false claims caught |
 | Tag-born records, ledger-shared form | −16.2% tokens vs prose (measured average) |
 
-The honest reading of these numbers: **the language lives at the code
-layer.** Computers parse it perfectly; AI models read it only partially,
-so wherever a model is involved, the code layer expands the symbols and
-hands over plain text. The pattern dictionary of Qwen3-4B (398 tensors —
-361 concentrated, 37 uniform, 0 mixed) is included under `numbers/` as a
-worked example of the method.
+The honest reading: **the language lives at the code layer.**
+Computers parse it perfectly; AI models read it only partially, so
+wherever a model is involved, the code layer expands the symbols and
+hands over plain text.
+
+**What shrinks, and what does not** (simulation, 2026-11-07, on the
+Qwen3-4B pattern dictionary): describing a brain's 398 tensors by
+listing values takes ≈48 GB of text; describing the same brain in
+Nexus patterns takes ≈16 KB — the *description, direction, and
+oversight layer* collapses by over 99.99%. The weight values
+themselves do **not** shrink: patterns mean values, they never
+replace them, and run-folding inside the weight body yields only an
+estimated 0.5–2%. The operating layer (records, status, direction)
+is measured at −16% to −80%.
 
 ## Layout
 
 ```
-language/        Grammar canon, dictionaries, interpreters, test report
-numbers/         Pattern dictionary of Qwen3-4B (JSON + human-readable) + number-system principles
+language/        Essence, grammar canon, dictionaries, interpreters, test report
+numbers/         Number-system principles (incl. the weight principle, v0.2.0) + pattern dictionary
 akashic-search/  The find-don't-store search method and procedure
 tag-records/     Grammar of tag-born records (capsule format)
 ```
 
-Canonical documents are in Korean; this README is the English overview.
-An English edition of the core documents is planned before publication.
+Canonical documents are in Korean; this README is the English
+overview.
 
 ## Principles
 
-- **The dictionary never changes meaning.** A registered symbol keeps its
-  meaning forever; growth happens only by registering new symbols.
-- **No guessing.** Unknown tokens, broken order, and claims that contradict
-  measured facts are rejected, never improvised around.
-- **The surface stays human.** Screens people see, and conversation with
-  people, remain in human language. Nexus Language is for the machine
-  layer underneath — internal signals, state reports, records, ledgers.
-- **Security is not secrecy.** Safety rests on encryption, keys, and access
-  control. The language adds at most a thin layer of "not casually
-  readable" — which is why publishing it costs nothing in security.
-- **Measure, then claim.** Every figure published here was measured on a
-  running system first, against a recorded baseline.
+- **A name is an agreement.** Meanings are fixed by registration,
+  never by nature — and once registered, never changed.
+- **No guessing.** Unknown tokens, broken order, and claims that
+  contradict measured facts are rejected, never improvised around.
+- **The surface stays human.** Nexus Language serves the machine
+  layer underneath — internal signals, state reports, records,
+  ledgers.
+- **Security is not secrecy.** Safety rests on encryption, keys, and
+  access control — which is why publishing this costs nothing in
+  security.
+- **Measure, then claim.** Every figure published here was measured
+  on a running system first.
 
 ## License
 
 - Code (`*.py`, including the interpreters and their tests):
   **Apache License 2.0** — see `LICENSE`.
-- Documents, grammars, dictionaries, and **all data files** (including
-  the pattern dictionary JSON): **CC BY 4.0** — see `LICENSE-CC-BY.txt`.
-  Use freely, with attribution to the Nexus Group.
+- Documents, grammars, dictionaries, and **all data files**
+  (including the pattern dictionary JSON): **CC BY 4.0** — see
+  `LICENSE-CC-BY.txt`.
+
+Use freely, with attribution to the Nexus Group.
+
 - Attribution and name-use terms: see `NOTICE`.
 
-Finalized after the Nexus Group's legal review on 2026-11-05. These
-licenses take effect on first publication.
+Finalized after the Nexus Group's legal review on 2026-11-05.
 
 ---
 
-*A work of the Nexus Group. Forged 2025–2026 from µTAG, through the Nexus
-Language canon, to the pattern language and Nexus Numbers.*
+*A work of the Nexus Group. Forged 2025–2026 from µTAG, through the
+Nexus Language canon, to the pattern language and Nexus Numbers.*
