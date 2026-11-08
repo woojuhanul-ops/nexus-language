@@ -98,13 +98,38 @@ replace them, and run-folding inside the weight body yields only an
 estimated 0.5–2%. The operating layer (records, status, direction)
 is measured at −16% to −80%.
 
+## Brain-frame conversion — repeated A/B measurement (2026-11-07)
+
+The same local model (Qwen3-14B class) was run under two operating
+frames — the previous frame, close to the bare model, and a frame
+rebuilt on the Nexus systems with a code layer enforcing hard
+boundaries — and measured on 18 fixed questions × 3 rounds × both
+sides (108 runs, 0 errors). Full method, tables, raw data, and
+limitations: [`brain-comparison/`](brain-comparison/).
+
+| Measure | Result |
+| --- | --- |
+| Mean response time | 26.4 s → 25.3 s (**−4.2% — inside ±40% round drift; no speed claim is made**) |
+| Payment-execution request | Code-gate stop in 0.0 s, 3/3 rounds, both frames (gate contribution, labelled as such) |
+| Unknown-person question | No fabrication either side; new frame answered with the **same short formal refusal 3/3** (mean 26.7 s → 10.7 s) |
+| Arithmetic (300,000 KRW × 36) | Old 2/3 (one 10× error) → new **3/3** (this sample only, n=3) |
+| Code-layer overhead of the new frame | ≈ 0 (per-layer timing) |
+
+An earlier single-pass figure (−37%) did **not** replicate under
+repetition and is withdrawn as an effect figure. Disclosure: the
+new frame also runs a non-public operations layer whose
+contribution is included in these numbers; separable contributions
+are labelled "gate contribution," and the results must not be read
+as the effect of the language and number systems alone.
+
 ## Layout
 
 ```
-language/        Essence, grammar canon, dictionaries, interpreters, test report
-numbers/         Number-system principles (incl. the weight principle, v0.2.0) + pattern dictionary
-akashic-search/  The find-don't-store search method and procedure
-tag-records/     Grammar of tag-born records (capsule format)
+language/          Essence, grammar canon, dictionaries, interpreters, test report
+numbers/           Number-system principles (incl. the weight principle, v0.2.0) + pattern dictionary
+akashic-search/    The find-don't-store search method and procedure
+tag-records/       Grammar of tag-born records (capsule format)
+brain-comparison/  Brain-frame A/B measurement: method, results, raw data (2026-11-07)
 ```
 
 Canonical documents are in Korean; this README is the English

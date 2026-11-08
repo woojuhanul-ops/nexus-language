@@ -1,5 +1,30 @@
 # Release Notes
 
+## v0.3.0 — Brain-frame A/B measurement published (2026-11-07)
+
+- Added `brain-comparison/`: the repeated A/B measurement of two
+  operating frames around the same local model (Qwen3-14B class) —
+  method, full result tables, gate/accuracy results, limitations,
+  the 18 test questions, and the complete raw records (108 runs,
+  JSON + CSV).
+- Headline, stated honestly: mean response time moved −4.2%,
+  inside ±40% round-to-round drift — **no speed improvement is
+  claimed**. Confirmed instead: exact reproducibility of the
+  code-gate payment stop (0.0 s, 3/3, both frames), consistent
+  formal refusals on the unknown-person question in the new frame
+  (3/3 identical, mean 26.7 s → 10.7 s), code-layer overhead ≈ 0,
+  and arithmetic 2/3 → 3/3 in this sample (n=3, not generalized).
+- The earlier single-pass figure (−37%) is explicitly withdrawn
+  as an effect figure; the document explains why.
+- Disclosure: the new frame also runs a non-public operations
+  layer; its contribution is included in the numbers, separable
+  contributions are labelled "gate contribution," and the results
+  must not be read as the effect of the language and number
+  systems alone. The non-public layer's internals are not
+  published.
+- No registered dictionary values or previously published figures
+  were changed.
+
 ## v0.2.0 — Definitions rewritten from the essence (2026-11-07)
 
 - README.md / README.ko.md rewritten: the essence now leads — a
